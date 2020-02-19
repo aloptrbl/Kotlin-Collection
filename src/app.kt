@@ -26,6 +26,10 @@ fun main()
     remainder()
     swapnumber()
     findlargenumber()
+    sumofnaturalnum()
+    checkleapyear()
+    factorial()
+    multiplicationtable()
     vowelorconsonant()
 }
 
@@ -122,4 +126,61 @@ fun swapnumber()
     a = b
     b = temp
     println("After swapping. a = $a, b = $b")
+}
+
+fun sumofnaturalnum()
+{
+    var a: Int = 2
+    var sum: Int = 0
+    for (i in 1..a) {
+        sum += i
+    }
+    println("Sum = " + sum)
+}
+
+fun checkleapyear()
+{
+    var year: Int = 2000
+    if(year % 4 == 0)
+    {
+        if(year % 100 == 0)
+        {
+            if(year % 400 == 0)
+            {
+                println("$year is a leap year.")
+            }
+            else
+            {
+                println("$year is not a leap year.")
+            }
+        }
+        else
+        {
+            println("$year is a leap year.")
+        }
+    } else
+    {
+        println("$year is not a leap year.")
+    }
+}
+
+fun factorial()
+{
+    var n:Int = 3
+    var factorial:Long = 1
+    for (i in 1..n)
+    {
+        factorial *= i
+    }
+    println("Factorial of $n = $factorial")
+}
+
+fun multiplicationtable()
+{
+    var n:Int = 10
+    for (i in 1..10)
+    {
+        println("$n x $i = $n * $i")
+    }
+
 }
