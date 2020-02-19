@@ -30,6 +30,9 @@ fun main()
     checkleapyear()
     factorial()
     multiplicationtable()
+    printforloop()
+    printwhileloop()
+    println(describe("Hello"))
     vowelorconsonant()
 }
 
@@ -164,6 +167,7 @@ fun checkleapyear()
     }
 }
 
+//Iterating over a range
 fun factorial()
 {
     var n:Int = 3
@@ -175,6 +179,7 @@ fun factorial()
     println("Factorial of $n = $factorial")
 }
 
+
 fun multiplicationtable()
 {
     var n:Int = 10
@@ -182,5 +187,35 @@ fun multiplicationtable()
     {
         println("$n x $i = $n * $i")
     }
-
 }
+
+//for loop
+fun printforloop()
+{
+    val items = listOf("apple", "banana", "kiwifruit")
+    for (item in items) {
+        println(item)
+    }
+}
+
+//while loop
+fun printwhileloop()
+{
+    val items = listOf("apple", "banana", "kiwifruit")
+    var index = 0
+    while (index < items.size) {
+        println("item at $index is ${items[index]}")
+        index++
+    }
+}
+
+//When expression
+fun describe(obj: Any): String =
+    when (obj) {
+        1          -> "One"
+        "Hello"    -> "Greeting"
+        is Long    -> "Long"
+        !is String -> "Not a string"
+        else       -> "Unknown"
+
+    }
